@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap');
+
+
+@font-face {
+   font-family: 'idroid';
+   src: url(../pacote-projeto-d010/fontes/idroid.otf);
+}
+
+/*
+Dica importantes: como está escrito nesse código, para criar "roots" ou seja, raízes do do seu código, podemos usar a tag :root para criar quais são as variáveis disponíveis para uso. Como, cores, fontes e etc.
+*/
+
+/*
+Agora para mexer em TODAS as marcações do seu código, ou seja uma alteração global, utilizamos a tag "*" para alterar parâmetros globais do site.
+*/
+
+
+:root {
+   --cor0: #366328;
+   --cor1: #418F29;
+   --cor2: #5CAB6D;
+   --cor3: #6AD576;
+   --cor4: #99FFA0;
+   --cor5: #ffffff;
+   --cor6: #0000004e;
+
+   --font-padrão: arial, verdana, helvetica, sans-serif;
+   --font-destaque: 'Bebas Neue', cursive;
+   --font-idroid: 'idroid', cursive;
+}
+
+* {
+   margin: 0;
+   padding: auto;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin: auto;
+}
+
+iframe {
+   max-width: 100%;
+   width: 100%;
+   height: 400px;
+   display: block;
+   margin: auto;
+}
+
+body {
+   background-color: var(--cor4);
+   min-width: 300px;
+   max-width: 1000px;
+   margin: auto;
+   text-align: justify;
+}
+
+strong {
+   text-shadow: 2px 2px 2px var(--cor6);
+}
+
+a {
+   text-decoration: none;
+   color: #0b7f13;
+   text-shadow: 2px 2px 2px var(--cor6);
+}
+
+li {
+   text-decoration: none;
+   color: #0b7f13;
+   text-shadow: 2px 2px 2px var(--cor6);
+}
+
+header {
+   color: var(--cor5);
+   background-color: var(--cor1);
+   padding-top: 20px;
+   margin-bottom: 5px;
+   box-shadow: 0px 0px 10px rgb(0, 0, 0.418);
+}
+
+header>h1 {
+   font-family: var(--font-destaque);
+   font-size: 2.5em;
+   text-shadow: 2px 2px 2px var(--cor6);
+   text-align: center;
+}
+
+header>p {
+   font-family: var(--font-padrão);
+   font-size: 1em;
+   color: var(--cor5);
+   text-shadow: 2px 2px 2px var(--cor6);
+   text-align: center;
+   padding-bottom: 10px;
+}
+
+header>nav>a {
+   font-family: var(--font-padrão);
+   font-size: 1.1em;
+   font-weight: bold;
+   color: var(--cor5);
+   text-shadow: 2px 2px 2px var(--cor6);
+   padding: 10px;
+   border-radius: 5px;
+}
+
+nav {
+   padding: 10px;
+   margin: 10px;
+}
+
+/*
+ATENÇÃO: ao aplicar qualquer pseudo-class e um element, use o indicador > pra declarar os elementos individualmente, caso contrário, irá aplicar na box inteira.
+*/
+nav> :hover {
+   background-image: linear-gradient(to top, var(--cor0), var(--cor1), var(--cor2));
+}
+
+main {
+   background-color: var(--cor5);
+   box-shadow: 0px 0px 10px rgb(0, 0, 0.418);
+   margin-bottom: 20px;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   padding: 10px;
+}
+
+aside {
+   background-color: var(--cor5);
+   box-shadow: 0px 0px 10px rgb(0, 0, 0.418);
+   margin-top: 10px;
+   margin-bottom: 20px;
+   border-radius: 10px;
+   padding: 10px;
+}
+
+aside>ul {
+   list-style-type: '\2714\00a0\00a0';
+   columns: 2;
+}
+
+main>article>h2 {
+   font-family: var(--font-idroid);
+   font-size: 2em;
+   color: var(--cor0);
+   text-shadow: 2px 2px 2px var(--cor2);
+   padding: 10px 10px 10px 10px;
+   border-radius: 5px;
+   background-image: linear-gradient(to right, var(--cor1), var(--cor5))
+}
+
+main>article>aside>h3 {
+   font-family: var(--font-idroid);
+   font-size: 1.2em;
+   color: var(--cor0);
+   text-shadow: 2px 2px 2px var(--cor2);
+   padding: 10px 10px 10px 3px;
+   background-image: linear-gradient(to right, var(--cor1), var(--cor5))
+}
+
+main>article>p {
+   font-size: 1.2em;
+   padding: 10px 10px 10px 0px;
+   text-indent: 10px;
+}
+
+main>article>aside>p {
+   font-size: 1.2em;
+   padding: 10px 10px 10px 0px;
+   text-indent: 10px;
+}
+
+main>article a {
+   background-color: var(--cor4);
+}
+
+footer {
+   background-color: var(--cor1);
+   color: var(--cor5);
+   text-shadow: 2px 2px 2px var(--cor2);
+   text-align: center;
+}
